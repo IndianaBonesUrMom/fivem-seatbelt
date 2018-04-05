@@ -16,7 +16,7 @@ Citizen.CreateThread(function()
 		local ped = GetPlayerPed(-1)
 		local car = GetVehiclePedIsIn(ped)
 		
-		if car ~= 0 and IsCar(car) then --jos pelaaja on autossa
+		if car ~= 0 and IsCar(car) then 
 			
 			if beltOn then DisableControlAction(0, 75) end
 				
