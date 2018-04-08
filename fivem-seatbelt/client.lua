@@ -23,7 +23,7 @@ Citizen.CreateThread(function()
 		local ped = GetPlayerPed(-1)
 		local car = GetVehiclePedIsIn(ped)
 		
-		if car ~= 0 and ((not wasInCar and IsCar(car)) or wasInCar) then
+		if car ~= 0 and (wasInCar or IsCar(car)) then
 		
 			wasInCar = true
 			
