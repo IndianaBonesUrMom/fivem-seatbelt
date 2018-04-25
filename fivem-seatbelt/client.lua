@@ -51,8 +51,8 @@ Citizen.CreateThread(function()
 				
 			if IsControlJustReleased(0, 311) then
 				beltOn = not beltOn				  
-				if beltOn then TriggerEvent('chatMessage', 'Turvavyö ^5 kiinni^0.')
-				else TriggerEvent('chatMessage', 'Turvavyö ^1 auki^0.') end 
+				if beltOn then TriggerEvent('chatMessage', Cfg.Strings.belt_on)
+				else TriggerEvent('chatMessage', Cfg.Strings.belt_off) end 
 			end
 			
 		elseif wasInCar then
