@@ -33,10 +33,10 @@ Citizen.CreateThread(function()
 			speedBuffer[1] = GetEntitySpeed(car)
 			
 			if speedBuffer[2] ~= nil 
+			   and not beltOn
 			   and GetEntitySpeedVector(car, true).y > 1.0  
-			   and speedBuffer[2] > Cfg.MinSpeed 
-			   and (speedBuffer[2] - speedBuffer[1]) > (speedBuffer[2] * Cfg.DiffTrigger) 
-			   and not beltOn then
+			   and speedBuffer[1] > Cfg.MinSpeed 
+			   and (speedBuffer[2] - speedBuffer[1]) > (speedBuffer[1] * Cfg.DiffTrigger) then
 			   
 				local co = GetEntityCoords(ped)
 				local fw = Fwv(ped)
